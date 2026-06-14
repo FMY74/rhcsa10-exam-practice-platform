@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RHCSA 10 exam practice — demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="topbar">
+    <a href="#home" class="brand">RHCSA<span>10</span> <span class="brand-tail">exam practice</span></a>
+    <nav id="topnav">
+      <a href="#home">ホーム</a>
+      <a href="#drill">分野別ドリル</a>
+      <a href="#history">復習</a>
+      <a href="#guides">学習ガイド</a>
+      <a href="#exam">模擬試験</a>
+    </nav>
+    <div id="bridge-status" class="bridge-status down" title="VM ブリッジの接続状態">● VM未接続</div>
+    <div id="exam-timer" class="exam-timer hidden"></div>
+  </header>
+
+  <main id="app"><!-- 画面はここに描画される --></main>
+
+  <footer id="footer">
+    Public demo — self-assessment viewer running on an original sample task set.
+    The real RHCSA practice content is excluded for copyright; the VM auto-grader needs local setup (see README).
+    <span class="footer-hint" id="shortcut-hint-trigger"><kbd>?</kbd> キーでショートカット一覧</span>
+  </footer>
+
+  <!-- vmbridge のベース URL を上書きしたい場合はこの行を編集（デフォルト 8770） -->
+  <script>/* window.RHCSA_BRIDGE_BASE = "http://127.0.0.1:8770"; */</script>
+
+  <!-- データ層 (本番は build_data.py が wiki から生成。公開版はオリジナルのサンプル) -->
+  <script src="js/data/categories.js"></script>
+  <script src="js/data/questions.js"></script>
+  <script src="js/data/exams.js"></script>
+  <script src="js/data/guides.js"></script>
+  <script src="js/data/cmdref.js"></script>
+  <!-- アプリ層 -->
+  <script src="js/ui/progress.js"></script>
+  <script src="js/bridge.js"></script>
+  <script src="js/grader.js"></script>
+  <script src="js/chat.js"></script>
+  <script src="js/ui/screens.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

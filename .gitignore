@@ -1,0 +1,27 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# Local-only / secrets — never commit
+app/tools/vmbridge.config.json
+*.key
+*.pem
+.env
+.env.*
+
+# Backups / temp
+*.bak
+*.bak-*
+*.log
+*.tmp
+backups/

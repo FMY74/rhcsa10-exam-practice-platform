@@ -1,0 +1,17 @@
+{
+  "_comment": "このファイルを vmbridge.config.json にコピーして、自分の RHEL 10 VM の情報に書き換えてください。vmbridge.config.json は .gitignore 済みです。",
+  "ssh_host": "192.168.x.x",
+  "ssh_user": "root",
+  "ssh_key": "~/.ssh/rhcsa_vm",
+  "ssh_port": 22,
+  "bridge_port": 8770,
+  "allowed_origins": ["http://localhost:8765", "http://127.0.0.1:8765"],
+  "_serverb_ssh_comment": "supplementary exam set で ServerB を判定するときに ServerA 上で発射するコマンド。grader.checks の cmd 中の ${SSH_B} がこの値に展開される。デフォルトは ssh root@server2（ServerA の /etc/hosts に server2 が解決できることが前提）。",
+  "serverb_ssh": "ssh -o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=5 root@server2",
+  "_chat_comment": "AI 質問チャット（任意）。anthropic_api_key を設定すると問題画面の右側に AI 家庭教師チャットが有効化される。空文字列のままなら /chat は 503 を返し、UI 側もチャットを表示しない。",
+  "anthropic_api_key": "",
+  "anthropic_model": "claude-haiku-4-5",
+  "_future": "vmx_path / snapshot_name は MVP 後の /reset・/reboot 用（現状は未使用）",
+  "vmx_path": "",
+  "snapshot_name": "clean"
+}
