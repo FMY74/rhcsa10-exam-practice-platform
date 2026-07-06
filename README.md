@@ -4,7 +4,7 @@ A personal study tool for the **Red Hat Certified System Administrator (RHCSA) E
 
 This repository is the **engine, published code-only**. The actual question bank and study notes are derived from third-party paid materials and are **deliberately excluded for copyright**. To keep the app explorable, it ships with a small set of **original sample tasks**.
 
-> **Live demo:** https://madeinthedark.github.io/rhcsa10-exam-practice-platform/app/
+> **Live demo:** https://fmy74.github.io/rhcsa10-exam-practice-platform/app/
 > Runs entirely in the browser on the sample tasks (self-assessment mode; no VM needed to look around).
 
 ---
